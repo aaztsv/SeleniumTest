@@ -1,25 +1,14 @@
+import Base.Base;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class PractiseNine {
+public class PractiseNine extends Base {
 
     @Test
 
     public void firstTest() throws InterruptedException {
 
-    System.setProperty("webdriver.chrome.driver", "/Users/nastiazaitseva/Downloads/chromedriver");
-
-    WebDriver driver = new ChromeDriver();
-
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-    driver.manage().window().maximize();
 
     driver.get("https://selectorshub.com/xpath-practice-page/");
 //    Thread.sleep(3000);
@@ -46,6 +35,5 @@ public class PractiseNine {
         submit.click();
         Thread.sleep(5000);
 
-        driver.quit();
 }
 }
